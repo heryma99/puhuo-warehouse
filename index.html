@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>璞景倉儲服務協議</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 15mm 15mm 15mm;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Microsoft JhengHei", "PingFang TC", "SimSun", serif;
+    font-size: 12pt;
+    line-height: 1.65;
+    color: #000;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 14mm 10mm 14mm;
+  }
+
+  .doc-title {
+    text-align: center;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 4pt;
+    margin-bottom: 3mm;
+  }
+
+  .doc-sub {
+    text-align: center;
+    font-size: 9pt;
+    color: #666;
+    margin-bottom: 6mm;
+  }
+
+  .contract-no {
+    text-align: right;
+    font-size: 10pt;
+    color: #333;
+    margin-bottom: 5mm;
+  }
+
+  /* ── Party Table (side by side) ── */
+  .party-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5mm;
+    font-size: 10.5pt;
+    line-height: 1.6;
+  }
+
+  .party-table th {
+    background: #f0f0f0;
+    font-weight: 700;
+    text-align: center;
+    padding: 3px 8px;
+    border: 1px solid #999;
+    width: 50%;
+    font-size: 11pt;
+  }
+
+  .party-table td {
+    padding: 2px 6px;
+    border: 1px solid #bbb;
+    vertical-align: top;
+    height: 22px;
+  }
+
+  .party-table .label-cell {
+    width: 72px;
+    text-align: right;
+    padding-right: 4px;
+    font-weight: 600;
+    background: #fafafa;
+    border: 1px solid #bbb;
+  }
+
+  .preamble {
+    text-indent: 2em;
+    margin-bottom: 4mm;
+    font-size: 11pt;
+  }
+
+  .article { margin-bottom: 3mm; }
+
+  .article-title {
+    font-size: 12pt;
+    font-weight: 700;
+    margin-bottom: 1.5mm;
+    text-align: center;
+  }
+
+  .clause {
+    margin-bottom: 1.5mm;
+    font-size: 10.5pt;
+    text-indent: 2em;
+    text-align: justify;
+  }
+
+  .clause-title {
+    font-weight: 700;
+    text-indent: 0;
+    margin-bottom: 0.5mm;
+    font-size: 10.5pt;
+  }
+
+  .clause ol, .clause ul {
+    padding-left: 2em;
+    margin: 0.5mm 0 1mm 0;
+  }
+
+  .clause li { margin-bottom: 0.5mm; text-indent: 0; }
+  .clause strong { font-weight: 700; }
+
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5mm 0 2.5mm 0;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .tbl th {
+    background: #e8e8e8;
+    font-weight: 700;
+    text-align: center;
+    padding: 2px 6px;
+    border: 1px solid #999;
+  }
+
+  .tbl td {
+    padding: 2px 6px;
+    border: 1px solid #bbb;
+    vertical-align: top;
+  }
+
+  .note {
+    background: #f9f6e8;
+    border: 1px solid #c9b85c;
+    padding: 2px 6px;
+    margin: 1.5mm 0;
+    font-size: 9.5pt;
+    color: #555;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 3mm 0;
+  }
+
+  .sig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6mm;
+    font-size: 10.5pt;
+  }
+
+  .sig-table td {
+    width: 50%;
+    vertical-align: top;
+    padding: 0;
+    line-height: 2.2;
+  }
+
+  .sig-table .sig-title {
+    font-weight: 700;
+    font-size: 11pt;
+    margin-bottom: 2mm;
+  }
+
+  .sig-table .sig-field { padding-left: 2em; }
+  .sig-table .sig-line {
+    display: inline-block;
+    width: 120px;
+    border-bottom: 1px solid #333;
+    margin-left: 4px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { width: 100%; margin: 0; padding: 0; }
+    .article { break-inside: avoid; }
+  }
+
+  @media screen {
+    body { background: #e8e8e8; }
+    .page {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-title">倉儲服務協議</div>
+  <div class="doc-sub">簡易協議 · 標準模板</div>
+  <div class="contract-no">合同編號：WH-[年份]-[序號]</div>
+
+  <!-- 甲乙方并排 -->
+  <table class="party-table">
+    <tr>
+      <th>甲方（倉儲服務商）</th>
+      <th>乙方（供應商）</th>
+    </tr>
+    <tr>
+      <td class="label-cell">公司名稱</td>
+      <td class="label-cell">公司名稱</td>
+    </tr>
+    <tr>
+      <td>璞景國際物流（深圳）有限公司</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="label-cell">信用代碼</td>
+      <td class="label-cell">信用代碼</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="label-cell">註冊地址</td>
+      <td class="label-cell">註冊地址</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="label-cell">法定代表人</td>
+      <td class="label-cell">法定代表人</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+
+  <div class="preamble">
+    鑒於乙方根據與平台方的鋪貨合作協議，將商品存入甲方運營之 PuHuo 倉，甲方為乙方提供倉儲及相關操作服務，雙方本着平等互利、誠實信用的原則，達成如下協議：
+  </div>
+
+  <!-- 第一條 -->
+  <div class="article">
+    <div class="article-title">第一條 服務內容</div>
+    <div class="clause"><span class="clause-title">1.1 倉儲服務</span>甲方為乙方提供商品倉儲保管服務，倉儲地點為甲方運營之 PuHuo 倉（以下簡稱「倉庫」）。</div>
+    <div class="clause"><span class="clause-title">1.2 操作服務</span>甲方根據平台方指令，為乙方提供商品的入庫驗收、上架、揀貨、加工處理、出庫等操作服務。</div>
+    <div class="clause"><span class="clause-title">1.3 服務期間</span>自乙方商品入庫甲方倉庫之日起，至商品完成結算（貨權轉移至平台方）或退回乙方出庫確認之日止。</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第二條 -->
+  <div class="article">
+    <div class="article-title">第二條 費用標準</div>
+    <div class="clause">
+      <span class="clause-title">2.1 倉儲費</span>
+      <ul>
+        <li><strong>月費率：</strong>$0.1 / 個 / 月</li>
+        <li><strong>日費率：</strong>$0.1 ÷ 30 = $0.00333 / 個 / 天（不足月按日折算）</li>
+        <li><strong>計費公式：</strong>倉儲費 = 數量 ×（滿月數 × $0.1 + 不足月天數 × $0.00333）</li>
+        <li><strong>起算日：</strong>商品入庫上架完成之日</li>
+        <li><strong>停算日：</strong>商品結算完成（貨權轉移）或退回乙方出庫確認之日</li>
+      </ul>
+    </div>
+    <div class="clause">
+      <span class="clause-title">2.2 操作費</span>
+      <table class="tbl">
+        <tr><th>費用項目</th><th>費率</th><th>說明</th></tr>
+        <tr><td>入庫操作費</td><td>$0.2 / 個</td><td>含驗收、上架</td></tr>
+        <tr><td>加工處理費</td><td>$0.4 / 個</td><td>含貼標、分揀、包裝等</td></tr>
+        <tr><td>出庫操作費</td><td>$0.2 / 個</td><td>含揀貨、發貨</td></tr>
+      </table>
+    </div>
+    <div class="clause">
+      <span class="clause-title">2.3 其他費用</span>因乙方原因產生的額外費用（如退貨物流費、銷毀處理費、質檢費等），按實發生金額由乙方承擔。
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第三條 -->
+  <div class="article">
+    <div class="article-title">第三條 費用結算</div>
+    <div class="clause"><span class="clause-title">3.1 結算週期</span>倉儲費與操作費按自然月結算，每月生成費用帳單。</div>
+    <div class="clause"><span class="clause-title">3.2 帳單確認</span>甲方每月 5 日前向乙方提供上月費用明細，乙方應在收到後 5 個工作日內確認。逾期未提出異議的，視為確認。</div>
+    <div class="clause"><span class="clause-title">3.3 付款方式</span>費用計入平台月結帳單，由平台方代為向乙方結算；或經雙方另行約定，由乙方直接向甲方支付。甲方收款帳戶信息如下：</div>
+    <div class="clause" style="text-indent:0; padding-left:2em;">
+      開戶銀行：[銀行名稱]<br>
+      帳戶名稱：璞景國際物流（深圳）有限公司<br>
+      銀行帳號：[帳號]
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第四條 -->
+  <div class="article">
+    <div class="article-title">第四條 雙方權利與義務</div>
+    <div class="clause">
+      <span class="clause-title">4.1 甲方權利與義務</span>
+      <ol>
+        <li>按照行業標準對乙方商品進行妥善保管和操作</li>
+        <li>按本協議約定向乙方收取倉儲費及操作費</li>
+        <li>定期向乙方提供庫存報表及費用明細</li>
+        <li>因甲方原因造成商品損毀、滅失的，甲方按商品採購成本價承擔賠償責任</li>
+        <li>配合平台方執行呆滯庫存退回、調拔出庫等操作</li>
+      </ol>
+    </div>
+    <div class="clause">
+      <span class="clause-title">4.2 乙方權利與義務</span>
+      <ol>
+        <li>按本協議約定按時支付倉儲費及操作費</li>
+        <li>確保所存商品符合倉儲安全要求（非危險品、非違禁品）</li>
+        <li>商品入庫前提供準確的商品信息（SKU、數量、規格等）</li>
+        <li>配合甲方進行庫存盤點及費用對帳</li>
+        <li>呆滯或質量問題商品按平台方要求配合退回，並承擔退回物流費及相關費用</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第五條 -->
+  <div class="article">
+    <div class="article-title">第五條 保密條款</div>
+    <div class="clause">雙方對在本協議履行過程中知悉的對方商業秘密（包括但不限於價格、庫存數據、客戶信息等）負有保密義務。未經對方書面同意，不得向第三方披露。保密義務在本協議終止後繼續有效，有效期為協議終止後 <strong>2 年</strong>。</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第六條 -->
+  <div class="article">
+    <div class="article-title">第六條 協議期限</div>
+    <div class="clause"><span class="clause-title">6.1 有效期</span>本協議自雙方簽署之日起生效，有效期為 <strong>1 年</strong>。期滿前 30 天，任何一方未以書面形式提出不續約的，本協議自動續期 1 年，以此類推。</div>
+    <div class="clause">
+      <span class="clause-title">6.2 終止</span>任何一方有權提前 30 天以書面形式通知對方終止本協議。協議終止後：
+      <ol>
+        <li>對協議終止前已入庫的商品，按本協議約定繼續執行至費用結清</li>
+        <li>乙方應在協議終止後 30 天內結清全部應付費用</li>
+        <li>乙方應在協議終止後 30 天內將庫存商品全部提走，逾期未提的，甲方有權收取滯留倉儲費或自行處置</li>
+        <li>保密條款繼續有效</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第七條 -->
+  <div class="article">
+    <div class="article-title">第七條 違約責任</div>
+    <div class="clause">
+      <ol>
+        <li>乙方逾期支付費用的，每逾期一天按應付金額的 <strong>0.05%</strong> 支付滯納金</li>
+        <li>乙方商品不符合倉儲安全要求造成甲方或第三方損失的，乙方應全額賠償</li>
+        <li>任何一方違反本協議約定的，應賠償對方因此遭受的直接經濟損失</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第八條 -->
+  <div class="article">
+    <div class="article-title">第八條 爭議解決</div>
+    <div class="clause">本協議項下的爭議，雙方應協商解決；協商不成的，任何一方有權向甲方所在地有管轄權的人民法院提起訴訟。</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 第九條 -->
+  <div class="article">
+    <div class="article-title">第九條 其他約定</div>
+    <div class="clause">
+      <ol>
+        <li>本協議與乙方與平台方簽署的《鋪貨業務合作協議》配套執行，互為補充。本協議未盡事宜，雙方可另行簽訂補充協議。</li>
+        <li>本協議一式兩份，甲乙雙方各執一份，具有同等法律效力。</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 簽章區（并排） -->
+  <table class="sig-table">
+    <tr>
+      <td>
+        <div class="sig-title">甲方（蓋章）</div>
+        <div class="sig-field">璞景國際物流（深圳）有限公司</div>
+        <div class="sig-field">法定代表人 / 授權代表：<span class="sig-line">&nbsp;</span></div>
+        <div class="sig-field">日期：<span class="sig-line">&nbsp;</span></div>
+      </td>
+      <td>
+        <div class="sig-title">乙方（蓋章）</div>
+        <div class="sig-field">法定代表人 / 授權代表：<span class="sig-line">&nbsp;</span></div>
+        <div class="sig-field">日期：<span class="sig-line">&nbsp;</span></div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</body>
+</html>
